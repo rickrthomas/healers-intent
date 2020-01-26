@@ -1,0 +1,57 @@
+.App {
+  font-family: 'Quicksand', sans-serif;
+text-align: center;
+ 
+}
+
+li{
+  padding-top: 10px;
+}
+
+.nav-wrapper{
+  background-color:  hsl(187, 98%, 35%)}
+
+.nav-logo{
+  width: 35px;
+}
+.row{
+  text-align: center;
+}
+.page-footer {
+  background-color:  hsl(187, 98%, 35%);
+  text-align:center;
+  width: 100%;
+}
+
+.askSendPic{
+  width: 100%;
+  height: auto;
+  padding-top: 0px;
+}
+
+.askSendText{
+  font-size: 250%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+}
+
+
+.askSendContainer{
+  position: relative;
+  text-align: center;
+}
+
+
+.disclaimer{
+  font-size:11px;
+}
+
+.instructionsIcon{
+  position: relative;
+  width: 60%;
+
+}

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b19cb25.chunk.css",
+    "main.js": "/static/js/main.7e006c48.chunk.js",
+    "main.js.map": "/static/js/main.7e006c48.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.cc034990.chunk.css": "/static/css/2.cc034990.chunk.css",
+    "static/js/2.21b03771.chunk.js": "/static/js/2.21b03771.chunk.js",
+    "static/js/2.21b03771.chunk.js.map": "/static/js/2.21b03771.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c1747967d9c30ad74c041ed6d1909208.js": "/precache-manifest.c1747967d9c30ad74c041ed6d1909208.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.cc034990.chunk.css.map": "/static/css/2.cc034990.chunk.css.map",
+    "static/css/main.3b19cb25.chunk.css.map": "/static/css/main.3b19cb25.chunk.css.map",
+    "static/media/Distant_Healing_1.png": "/static/media/Distant_Healing_1.c4e641c0.png",
+    "static/media/Distant_Healing_2.png": "/static/media/Distant_Healing_2.76f5e872.png",
+    "static/media/Distant_Healing_3.png": "/static/media/Distant_Healing_3.3791e2a9.png",
+    "static/media/Distant_Healing_4.png": "/static/media/Distant_Healing_4.e170d2d1.png",
+    "static/media/Distant_Healing_5.png": "/static/media/Distant_Healing_5.465cc794.png",
+    "static/media/ask.png": "/static/media/ask.b93cc640.png",
+    "static/media/send.png": "/static/media/send.f6167c54.png"
+  }
+}
