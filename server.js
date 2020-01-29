@@ -42,7 +42,7 @@ connection.once('open', () => {
 
 const exercisesRouter = require('./routes/exercises');
 
-app.use('/', routes);
+
 app.use('/exercises', exercisesRouter);
 
 
