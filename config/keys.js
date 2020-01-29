@@ -1,4 +1,5 @@
 module.exports = {
-    mongoURI: "ATLAS_URI=mongodb+srv://rick:rick767@cluster0-qx7ec.mongodb.net/test?retryWrites=true&w=majority",
+    mongoURI: "ATLAS_URI=mongodb+srv://tru:tru2luv676!@cluster0-h2tsd.mongodb.net/test?retryWrites=true&w=majority",
     secretOrKey: "secret"
 }
+
