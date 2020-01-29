@@ -42,7 +42,7 @@ connection.once('open', () => {
 
 const exercisesRouter = require('./routes/exercises');
 
-
+app.use('/', routes);
 app.use('/exercises', exercisesRouter);
 
 
@@ -50,7 +50,7 @@ if(process.env.NODE_ENV === 'production') {
   app.use(express.static( 'client/build'));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.json(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   })
 }
 
