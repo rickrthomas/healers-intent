@@ -26,7 +26,7 @@ const uri = process.env.ATLAS_URI;
 
 // Connect to MongoDB
 mongoose
-  .connect(
+  .connect(process.env.MONGO_URI || 
     uri,
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
@@ -45,7 +45,9 @@ const exercisesRouter = require('./routes/exercises');
 
 app.use('/exercises', exercisesRouter);
 
-
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
