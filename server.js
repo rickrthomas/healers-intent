@@ -26,7 +26,7 @@ const uri = process.env.ATLAS_URI;
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI || 
+  .connect(process.env.ATLAS_URI || 
     uri,
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
