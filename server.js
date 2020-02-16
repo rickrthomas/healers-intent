@@ -3,11 +3,13 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const dotenv = require("dotenv");
 
 
-require('dotenv').config();
+
 
 const app = express();
+dotenv.config();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -29,11 +31,10 @@ app.get("*", (req, res) => {
     });
 
 const uri = process.env.ATLAS_URI;
-
+console.log(process.env.ATLAS_URI);
 // Connect to MongoDB
 mongoose
-  .connect(process.env.ATLAS_URI || 
-    uri,
+  .connect(uri,
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
   .then(() => console.log("MongoDB successfully connected"))
