@@ -34,7 +34,7 @@ const uri = process.env.ATLAS_URI;
 console.log(process.env.ATLAS_URI);
 // Connect to MongoDB
 mongoose
-  .connect(uri,
+  .connect(uri || mongodb://rick:ricktru767@ds047447.mlab.com:47447/heroku_r1t3qd51
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
   .then(() => console.log("MongoDB successfully connected"))
