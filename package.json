@@ -27,9 +27,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
-    "install-client": "cd client && npm install && npm run build",
-    "heroku-postbuild": "npm run install-client",
-    "start": "npm install && node server.js && cd client && npm install & npm start",
+     
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "npm install && node server.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon server.js\" \"npm run client\"",
     
