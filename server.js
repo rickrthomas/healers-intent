@@ -10,6 +10,15 @@ const dotenv = require("dotenv");
 
 const app = express();
 dotenv.config();
+/*express index.js*/
+
+/*Adds the react production build to serve react requests*/
+app.use(express.static(path.join(__dirname, "./client/build")));
+/*React root*/
+app.get("*", (req, res) => {
+res.sendFile(path.join(__dirname + "./client/build/index.html"));
+});
+
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -23,18 +32,12 @@ app.use(
 );
 app.use(bodyParser.json());
 
-/*Adds the react production build to serve react requests*/
-app.use(express.static(path.join(__dirname, "../client/build")));
-/*React root*/
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "../client/build/index.html"));
-    });
 
 const uri = process.env.ATLAS_URI;
-console.log(process.env.ATLAS_URI);
+
 // Connect to MongoDB
 mongoose
-  .connect(uri || mongodb://rick:ricktru767@ds047447.mlab.com:47447/heroku_r1t3qd51
+  .connect(uri,
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
   .then(() => console.log("MongoDB successfully connected"))
