@@ -10,7 +10,7 @@ const dotenv = require("dotenv");
 
 const app = express();
 dotenv.config();
-/*express index.js*/
+
 
 /*Adds the react production build to serve react requests*/
 app.use(express.static(path.join(__dirname, "./client/build")));
@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 // const uri = process.env.ATLAS_URI;
 
 // const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://tru1:<password>@cluster0-pp7lx.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://tru1:InfiniteLuv1@cluster0-pp7lx.mongodb.net/test?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true });
 //client.connect(err => {
 // const collection = client.db("test").collection("devices");
