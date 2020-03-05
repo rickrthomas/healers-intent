@@ -33,7 +33,16 @@ app.use(
 app.use(bodyParser.json());
 
 
-const uri = process.env.ATLAS_URI;
+// const uri = process.env.ATLAS_URI;
+
+// const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://tru1:<password>@cluster0-pp7lx.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+//client.connect(err => {
+// const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+//  client.close();
+// });
 
 // Connect to MongoDB
 mongoose
