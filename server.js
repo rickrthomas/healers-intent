@@ -15,7 +15,7 @@ dotenv.config();
 /*Adds the react production build to serve react requests*/
 app.use(express.static(path.join(__dirname, "/client/build")));
 /*React root*/
-app.get("*", (req, res) => {
+app.get('*', (req, res) => {
 res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
@@ -33,16 +33,17 @@ app.use(
 app.use(bodyParser.json());
 
 
-// const uri = process.env.ATLAS_URI;
+const uri = process.env.ATLAS_URI;
 
 // const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://tru1:InfiniteLuv1@cluster0-pp7lx.mongodb.net/test?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://tru1:InfiniteLuv1@cluster0-pp7lx.mongodb.net/test?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true });
 //client.connect(err => {
 // const collection = client.db("test").collection("devices");
   // perform actions on the collection object
 //  client.close();
 // });
+
 
 // Connect to MongoDB
 mongoose
