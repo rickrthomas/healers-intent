@@ -68,32 +68,36 @@ const Person = props => (
 class ExerciseList extends Component {
     constructor(props) {
         super(props);
-        this.deleteExercise = this.deleteExercise.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        // this.deleteExercise = this.deleteExercise.bind(this);
+        // this.onSubmit = this.onSubmit.bind(this);
         this.state = {exercises: []};
     }
         componentDidMount() {
-            axios.get('http://localhost:5000/exercises/')
+            axios.get(process.env.ATLAS_URI || 'http://localhost:5000/exercises/', { headers: { 'crossDomain': true, 'Content-Type': 'application/json' }})
             .then(response => {
-                this.setState ({ exercises: response.data })
+                this.setState ({ exercises: response.data }).then(profileState => {
+                    console.log(JSON.stringify(this.state.exercises))
+                });
             })
             .catch((error) => {
                 console.log(error);
             })
         }
     
-        deleteExercise(id) {
-            axios.delete('http://localhost:5000/exercises/'+id)
-            .then(res => console.log(res.data));
-            
-            window.location ='/';
-        }
+        // deleteExercise(id) {
+          //  axios.delete('http://localhost:5000/exercises/'+id)
+           // .then(res => console.log(res.data));
+           // 
+          //  window.location ='/';
+        // }
         
-        onSubmit(id){
-            axios.post('http://localhost:5000/innercircle/')
-            .then(res => console.log(res.data));
-        }
+        // onSubmit(id){
+        //    axios.post('http://localhost:5000/innercircle/')
+        //    .then(res => console.log(res.data));
+        // }
+
         personList() {
+            console.log(this.state.exercises);
             return this.state.exercises.map(currentexercise => {
                 return <Person exercise={currentexercise} deleteExercise={this.deleteExercise} key={currentexercise._id} />;
             })
