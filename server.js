@@ -41,7 +41,7 @@ const uri = "mongodb+srv://tru1:tru12345@cluster0-pp7lx.mongodb.net/test?retryWr
 
 // Connect to MongoDB
 mongoose
-  .connect(uri,
+  .connect(process.env.ATLAS_URI || uri,
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   )
   .then(() => console.log("MongoDB successfully connected"))
@@ -61,14 +61,17 @@ app.use('/exercises', exercisesRouter);
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
-}
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname + "/client/build/index.html"));
+      });
+};
 
 /*Adds the react production build to serve react requests*/
-app.use(express.static(path.join(__dirname, "/client/build")));
+//app.use(express.static(path.join(__dirname, "/client/build")));
 /*React root*/
-app.get('*', (req, res) => {
-res.sendFile(path.join(__dirname + "/client/build/index.html"));
-});
+//app.get('*', (req, res) => {
+//res.sendFile(path.join(__dirname + "/client/build/index.html"));
+//});
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

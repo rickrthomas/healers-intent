@@ -152,93 +152,91 @@ class CreateExercises extends Component {
     render() {
         return (
             <div className="container">
-            <h3>HEALING REQUEST</h3>
-            <h4>About the Person in Need of 
-                Healing</h4>
+                <h3>HEALING REQUEST</h3>
+                <h4>About the Person in Need of Healing</h4>
                     <form onSubmit={this.onSubmit}>
-                    <div className="row">          
-        </div>
+                        <div className="row">          
+                            </div>
+                            <div className="row">
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                First Name
+                                    <input
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.first.value} 
+                                        onChange={this.onChangeFirst}
+                                        name="first"
+                                        placeholder="First Name"
+                                    />
+                                </label>
+                            </div>
+                            </div>
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                Last Name
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.last.value} 
+                                        onChange={this.onChangeLast} 
+                                        name="last" 
+                                        placeholder="Last Name"
+                                    />
+                                </label>
+                            </div>
+                            </div>
+                        </div>
                         <div className="row">
-                        <div className="col s12 m6">
-                        <div className="form-group">
-            <label>
-              First Name
-                <input
-                  type="text" 
-                  className="validate" 
-                  value={this.state.first.value} 
-                  onChange={this.onChangeFirst}
-                  name="first"
-                  placeholder="First Name"
-                />
-            </label>
-        </div>
-        </div>
-        <div className="col s12 m6">
-        <div className="form-group">
-         
-            <label>
-              Last Name
-                <input 
-                type="text" 
-                className="validate" 
-                value={this.state.last.value} 
-                onChange={this.onChangeLast} 
-                name="last" 
-                placeholder="Last Name"
-                />
-            </label>
-        </div>
-        </div>
-        </div>
-        <div className="row">
-        <div className="col s12 m6">
-        <div className="form-group">
-            <label>
-              Age
-                <input 
-                type="text" 
-                className="validate" 
-                value={this.state.age.value} 
-                onChange={this.onChangeAge} 
-                name="age" 
-                placeholder="Age"
-                />
-            </label>
-        </div>  
-        </div>
-        <div className="col s12 m6">
-        <div className="form-group">  
-            <label>
-              Gender
-                <input 
-                type="text" 
-                className="validate" 
-                value={this.state.gender.value} 
-                onChange={this.onChangeGender}
-                name="gender"
-                placeholder="Gender"
-                />
-            </label>
-        </div>
-        </div>
-        </div>
-      <h4>Where They Live</h4>
-      <div className="row">
-      <div className="col s12 m6">
-        <div className="form-group">
-            <label>
-              City
-              <input 
-              type="text" 
-              value={this.state.city.value} 
-              onChange={this.onChangeCity} 
-              name="city" 
-              placeholder="City"
-              />
-            </label>
-        </div>
-        </div>
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                Age
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.age.value} 
+                                        onChange={this.onChangeAge} 
+                                        name="age" 
+                                        placeholder="Age"
+                                    />
+                                </label>
+                            </div>  
+                            </div>
+                            <div className="col s12 m6">
+                            <div className="form-group">  
+                                <label>
+                                Gender
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.gender.value} 
+                                        onChange={this.onChangeGender}
+                                        name="gender"
+                                        placeholder="Gender"
+                                    />
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <h4>Where They Live</h4>
+                        <div className="row">
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                City
+                                <input 
+                                    type="text" 
+                                    value={this.state.city.value} 
+                                    onChange={this.onChangeCity} 
+                                    name="city" 
+                                    placeholder="City"
+                                />
+                                </label>
+                            </div>
+                            </div>
         <div className="col s12 m6">
         <div className="form-group">
             <label>
